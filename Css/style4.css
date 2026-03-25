@@ -10,120 +10,150 @@ body {
     color: white;
     margin: 0;
     padding: 0;
+}/* ========================= */
+/* Reset / base */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
+html {
+    font-family: 'Georgia', serif;
+    color: white;
+    scroll-behavior: smooth;
+    background-image: url("../Image/mushoku-tensei6.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: top center;
+}
+
+/* ========================= */
+/* Header et nav */
 header {
     background-color: rgba(0, 0, 0, 0.6);
-    padding: 20px;
-    text-align: center;
-}
-.titre {
-    text-align: left;
-}
-.Autre_page {
-    text-align: justify;
+    overflow: hidden;
+    padding: 10px 20px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 20px;
 }
 
-header h1 {
-    font-size: 2em;
+header img {
+    width: 20%;
+    max-width: 150px;
+    height: auto;
+    border-radius: 10px;
+    transition: transform 0.3s ease;
+}
+
+header img:hover {
+    transform: scale(1.05);
+}
+
+.titre {
+    flex: 1;
 }
 
 nav ul {
-    list-style-type: none;
-    padding: 0;
-}
-
-nav ul li {
-    display: inline;
-    margin-right: 20px;
+    list-style: none;
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
 }
 
 nav ul li a {
     color: white;
     text-decoration: none;
     font-weight: bold;
+    position: relative;
+    transition: color 0.2s ease;
 }
 
+nav ul li a::after {
+    content: "";
+    position: absolute;
+    width: 0%;
+    height: 2px;
+    left: 0;
+    bottom: -3px;
+    background-color: #ffd700;
+    transition: width 0.3s ease;
+}
+
+nav ul li a:hover {
+    color: #ffd700;
+}
+
+nav ul li a:hover::after {
+    width: 100%;
+}
+
+/* ========================= */
+/* Sections */
 section {
-    padding: 20px;
-    background-color: rgba(0, 0, 0, 0.4);
-    margin: top 0;;
+    background-color: rgba(0,0,0,0.4);
     border-radius: 10px;
+    padding: 20px;
+    margin: 20px auto;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+section:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.5);
+}
+
+h1 {
+    animation: pulse 3s infinite;
+    margin-bottom: 10px;
 }
 
 h2, h3, h4 {
-    font-family: 'Georgia', serif;
+    margin-bottom: 10px;
 }
 
-ul, ol {
-    padding-left: 20px;
-}
-
+/* ========================= */
+/* Table responsive et animation */
 table {
     width: 100%;
     border-collapse: collapse;
     margin-top: 20px;
-    background-color: rgba(0,0,0,0.5);
+    transition: transform 0.4s ease;
 }
 
-table, th, td {
-    border: 1px solid white;
+table:hover {
+    transform: scale(1.02);
 }
 
 th, td {
-    padding: 8px;
+    padding: 10px;
+    border: 1px solid white;
     text-align: center;
-    font-size: 0.95em;
 }
 
-th {
-    background-color: rgba(30,30,30,0.8);
-}
-
-tr:nth-child(even) {
-    background-color: rgba(50,50,50,0.5);
-}
-
-
-video-container {
+/* ========================= */
+/* Iframe responsive */
+.video-container {
     position: relative;
     width: 100%;
-    max-width: 80px; /* largeur maximale pour uniformiser toutes les vidéos */
     height: 0;
-    padding-bottom: 56.25%; /* ratio 16:9 */
+    padding-bottom: 56.25%; /* 16:9 ratio */
     overflow: hidden;
-    margin: 0 auto; /* centrage horizontal */
+    border-radius: 10px;
 }
 
-video-container iframe {
+.video-container iframe {
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    border: none;
 }
 
-
-video-cell {
-    text-align: center;
-    vertical-align: top;
-    padding: 5px;
-}
-
-
-video-cell p {
-    margin: 5px 0;
-    font-weight: bold;
-    font-size: 0.95em;
-}
-
-
-@media screen and (max-width: 768px) {
-    .video-container {
-        max-width: 90%;
-    }
-}
+/* ========================= */
+/* Animations scroll */
 .hidden {
     opacity: 0;
     transform: translateY(30px);
@@ -133,4 +163,46 @@ video-cell p {
 .visible {
     opacity: 1;
     transform: translateY(0);
+}
+
+/* images = effet zoom léger */
+img.hidden {
+    transform: scale(0.95);
+}
+
+img.visible {
+    transform: scale(1);
+}
+
+/* tables = effet plus lent */
+table.hidden {
+    transform: scale(0.9);
+    transition: all 0.8s ease;
+}
+
+/* ========================= */
+/* Hover général */
+img {
+    transition: transform 0.4s ease, filter 0.4s ease;
+    border-radius: 10px;
+}
+
+img:hover {
+    transform: scale(1.05);
+    filter: brightness(1.1);
+}
+
+a {
+    transition: color 0.3s ease;
+}
+
+a:hover {
+    color: #ffd700;
+}
+
+/* ========================= */
+/* Pulse animation h1 */
+@keyframes pulse {
+    0%, 100% { transform: scale(1); }
+    50% { transform: scale(1.03); }
 }
