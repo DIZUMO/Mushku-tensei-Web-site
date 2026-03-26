@@ -1,7 +1,7 @@
 html{     
 	background-image: url("../Image/wp12843789-mushoku-tensei-4k-wallpapers.jpg");
-	background-size: cover;
-	background-repeat: no-repeat;
+	background-size: contain;
+	background-repeat: repeat;
 	background-position: top center;
 	}
 
