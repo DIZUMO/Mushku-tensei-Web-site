@@ -37,21 +37,21 @@ body {
 /* HEADER */
 
 header {
-    background-color: rgba(0, 0, 0, 0.65);
-    padding: 15px 20px;
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    gap: 20px;
+    background-color: rgba(0, 0, 0, 0.6);
+    overflow: hidden;
+    padding: 10px 20px;
+    position: relative;
 }
 
 
-/* logo */
+/* logo — float left comme les autres pages */
 
 header img {
+    float: left;
     width: 20%;
-    max-width: 150px;
     height: auto;
+    margin-left: 10px;
+    margin-right: 20px;
     border-radius: 10px;
     transition: transform 0.3s ease;
 }
@@ -64,7 +64,7 @@ header img:hover {
 /* titre */
 
 .titre {
-    flex: 1;
+    text-align: left;
 }
 
 
@@ -275,15 +275,14 @@ a:hover {
 /* ========================= */
 
 
-/* RESPONSIVE (là où ton site arrête de casser) */
+/* RESPONSIVE */
 
 @media (max-width: 768px) {
-    header {
-        flex-direction: column;
-        align-items: flex-start;
-    }
     header img {
+        float: none;
+        display: block;
         width: 40%;
+        margin: 0 auto 10px auto;
     }
     .video-cell {
         flex: 1 1 100%;
@@ -303,13 +302,6 @@ a:hover {
 
 /* ========================= */
 
-header {
-    position: relative;
-}
-
-
-/* Supprime les anciens styles absolute qui couvrent tout le header */
-
 .nav-fleches {
     display: flex;
     align-items: center;
@@ -319,6 +311,7 @@ header {
     pointer-events: all;
     margin-top: 10px;
     padding: 0;
+    clear: left;
 }
 
 .fleche {
