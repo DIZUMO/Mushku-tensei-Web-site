@@ -1,7 +1,7 @@
 /* ========================= */
 
 
-/* RESET PROPRE (évite les bugs débiles) */
+/* RESET PROPRE */
 
 * {
     margin: 0;
@@ -43,38 +43,24 @@ header {
     position: relative;
 }
 
-
-/* logo — float left comme les autres pages */
-
-header img {
-    float: left;
-    width: 20%;
-    height: auto;
-    margin-left: 10px;
-    margin-right: 20px;
-    border-radius: 10px;
-    transition: transform 0.3s ease;
-}
-
-header img:hover {
-    transform: scale(1.05);
-}
-
-
-/* titre */
-
 .titre {
     text-align: left;
 }
 
 
+/* ========================= */
+
+
 /* NAV */
 
 nav ul {
-    list-style: none;
-    display: flex;
-    gap: 20px;
-    flex-wrap: wrap;
+    list-style-type: none;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin-right: 20px;
 }
 
 nav ul li a {
@@ -83,9 +69,6 @@ nav ul li a {
     font-weight: bold;
     position: relative;
 }
-
-
-/* underline animé (HubSpot style) */
 
 nav ul li a::after {
     content: "";
@@ -113,11 +96,10 @@ nav ul li a:hover {
 /* SECTION */
 
 section {
-    background-color: rgba(0, 0, 0, 0.45);
-    border-radius: 10px;
     padding: 20px;
-    margin: 20px auto;
-    max-width: 1200px;
+    background-color: rgba(0, 0, 0, 0.4);
+    margin-top: 0;
+    border-radius: 10px;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
@@ -134,20 +116,24 @@ section:hover {
 
 h1 {
     animation: pulse 3s infinite;
-    margin-bottom: 10px;
 }
 
 h2,
 h3,
 h4 {
-    margin-bottom: 10px;
+    font-family: 'Georgia', serif;
+}
+
+ul,
+ol {
+    padding-left: 20px;
 }
 
 
 /* ========================= */
 
 
-/* FLEX VIDEOS (FIN DES TABLES 🪦) */
+/* FLEX VIDEOS — 3 par ligne fixe */
 
 .video-grid {
     display: flex;
@@ -156,21 +142,16 @@ h4 {
     justify-content: center;
 }
 
-
-/* chaque vidéo */
-
 .video-cell {
-    flex: 1 1 300px;
-    max-width: 400px;
+    flex: 0 0 calc(33.333% - 14px);
+    max-width: calc(33.333% - 14px);
     display: flex;
     flex-direction: column;
     align-items: center;
     text-align: center;
 }
 
-
-/* ratio propre */
-
+/* ratio 16/9 propre */
 .video-container {
     position: relative;
     width: 100%;
@@ -187,6 +168,13 @@ h4 {
     left: 0;
 }
 
+/* iframes hors .video-container */
+iframe {
+    border-radius: 10px;
+    width: 100%;
+    aspect-ratio: 16 / 9;
+}
+
 
 /* ========================= */
 
@@ -200,15 +188,20 @@ table {
     transition: transform 0.4s ease;
 }
 
-table:hover {
-    transform: scale(1.01);
+table,
+th,
+td {
+    border: 1px solid white;
 }
 
 th,
 td {
     padding: 10px;
-    border: 1px solid white;
     text-align: center;
+}
+
+table:hover {
+    transform: scale(1.01);
 }
 
 
@@ -229,7 +222,10 @@ td {
 }
 
 
-/* images */
+/* ========================= */
+
+
+/* IMAGES */
 
 img {
     transition: transform 0.4s ease, filter 0.4s ease;
@@ -245,7 +241,7 @@ img:hover {
 /* ========================= */
 
 
-/* MICRO INTERACTIONS (HubSpot vibes) */
+/* LIENS */
 
 a {
     transition: color 0.3s ease;
@@ -275,28 +271,6 @@ a:hover {
 /* ========================= */
 
 
-/* RESPONSIVE */
-
-@media (max-width: 768px) {
-    header img {
-        float: none;
-        display: block;
-        width: 40%;
-        margin: 0 auto 10px auto;
-    }
-    .video-cell {
-        flex: 1 1 100%;
-        max-width: 100%;
-    }
-    section {
-        margin: 10px;
-    }
-}
-
-
-/* ========================= */
-
-
 /* Navigation par flèches    */
 
 
@@ -311,7 +285,6 @@ a:hover {
     pointer-events: all;
     margin-top: 10px;
     padding: 0;
-    clear: left;
 }
 
 .fleche {
@@ -346,4 +319,21 @@ a:hover {
     color: rgba(255, 255, 255, 0.65);
     letter-spacing: 2px;
     text-transform: uppercase;
+}
+
+
+/* ========================= */
+
+
+/* RESPONSIVE */
+
+@media (max-width: 768px) {
+    .video-cell {
+        flex: 0 0 100%;
+        max-width: 100%;
+    }
+
+    section {
+        margin: 10px;
+    }
 }
