@@ -1,0 +1,328 @@
+/* ================================================== */
+/*  RESET                                             */
+/* ================================================== */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+/* ================================================== */
+/*  BASE                                              */
+/* ================================================== */
+
+html {
+    scroll-behavior: smooth;
+    font-family: 'Georgia', serif;
+    color: white;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+}
+
+
+/* ================================================== */
+/*  HEADER                                            */
+/* ================================================== */
+
+header {
+    background-color: rgba(0, 0, 0, 0.6);
+    overflow: hidden;
+    padding: 10px 20px;
+    position: relative;
+}
+
+header img {
+    float: left;
+    width: 20%;
+    height: auto;
+    margin-left: 10px;
+    margin-right: 20px;
+}
+
+.titre {
+    text-align: left;
+}
+
+
+/* ================================================== */
+/*  NAVIGATION LIENS                                  */
+/* ================================================== */
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin-right: 20px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    position: relative;
+}
+
+/* Underline animé au survol */
+nav ul li a::after {
+    content: "";
+    position: absolute;
+    width: 0%;
+    height: 2px;
+    left: 0;
+    bottom: -3px;
+    background-color: #ffd700;
+    transition: width 0.3s ease;
+}
+
+nav ul li a:hover::after {
+    width: 100%;
+}
+
+nav ul li a:hover {
+    color: #ffd700;
+}
+
+
+/* ================================================== */
+/*  NAVIGATION PAR FLÈCHES                            */
+/* ================================================== */
+
+.nav-fleches {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    margin-top: 10px;
+    padding: 0;
+}
+
+.fleche {
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    border: 2px solid rgba(255, 255, 255, 0.7);
+    background: rgba(0, 0, 0, 0.3);
+    color: white;
+    font-size: 1.4rem;
+    line-height: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    user-select: none;
+    transition: background 0.25s ease, border-color 0.25s ease, color 0.25s ease, transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.fleche:hover {
+    background: rgba(255, 215, 0, 0.85);
+    border-color: #ffd700;
+    color: #1a1a1a;
+    transform: scale(1.18);
+    box-shadow: 0 0 12px rgba(255, 215, 0, 0.6);
+}
+
+.page-actuelle {
+    font-size: 0.82rem;
+    color: rgba(255, 255, 255, 0.65);
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
+
+
+/* ================================================== */
+/*  SECTIONS                                          */
+/* ================================================== */
+
+section {
+    padding: 20px;
+    background-color: rgba(0, 0, 0, 0.4);
+    margin-top: 20px;
+    border-radius: 10px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+section:hover {
+    transform: translateY(-40px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.5);
+}
+
+
+/* ================================================== */
+/*  TITRES                                            */
+/* ================================================== */
+
+h1 {
+    animation: pulse 3s infinite;
+}
+
+h2,
+h3,
+h4 {
+    font-family: 'Georgia', serif;
+    margin-bottom: 10px;
+}
+
+ul,
+ol {
+    padding-left: 20px;
+}
+
+
+/* ================================================== */
+/*  TABLEAUX                                          */
+/* ================================================== */
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    transition: transform 0.4s ease;
+}
+
+table,
+th,
+td {
+    border: 1px solid white;
+}
+
+th,
+td {
+    padding: 10px;
+    text-align: center;
+}
+
+table:hover {
+    transform: scale(1.01);
+}
+
+
+/* ================================================== */
+/*  IMAGES                                            */
+/* ================================================== */
+
+img {
+    border-radius: 10px;
+    transition: transform 0.4s ease, filter 0.4s ease;
+}
+
+img:hover {
+    transform: scale(1.05);
+    filter: brightness(1.1);
+}
+
+
+/* ================================================== */
+/*  IFRAMES                                           */
+/* ================================================== */
+
+iframe {
+    border-radius: 10px;
+    width: 100%;
+    aspect-ratio: 16 / 9;
+}
+
+
+/* ================================================== */
+/*  LIENS                                             */
+/* ================================================== */
+
+a {
+    transition: color 0.3s ease;
+}
+
+a:hover {
+    color: #ffd700;
+}
+
+
+/* ================================================== */
+/*  GRILLE VIDÉOS (3 par ligne fixe)                  */
+/* ================================================== */
+
+.video-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}
+
+.video-cell {
+    flex: 0 0 calc(33.333% - 14px);
+    max-width: calc(33.333% - 14px);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.video-container {
+    position: relative;
+    width: 100%;
+    padding-bottom: 56.25%;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.video-container iframe {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+}
+
+
+/* ================================================== */
+/*  ANIMATIONS SCROLL (IntersectionObserver)          */
+/* ================================================== */
+
+.hidden {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: all 0.6s ease;
+}
+
+.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+
+/* ================================================== */
+/*  ANIMATION PULSE (h1)                              */
+/* ================================================== */
+
+@keyframes pulse {
+    0%, 100% { transform: scale(1); }
+    50%       { transform: scale(1.03); }
+}
+
+
+/* ================================================== */
+/*  RESPONSIVE                                        */
+/* ================================================== */
+
+@media (max-width: 768px) {
+    header img {
+        float: none;
+        display: block;
+        width: 40%;
+        margin: 0 auto 10px auto;
+    }
+
+    .video-cell {
+        flex: 0 0 100%;
+        max-width: 100%;
+    }
+
+    section {
+        margin: 10px;
+    }
+}
