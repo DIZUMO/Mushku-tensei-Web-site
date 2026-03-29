@@ -198,6 +198,7 @@ function showTableView() {
     });
 
     wrapper.innerHTML = `<table><tbody>${rows}</tbody></table>`;
+    setTimeout(wrapDynamicIframes, 0);
 }
 
 function showPlayerView() {
@@ -216,6 +217,7 @@ function renderPlayer() {
     container.innerHTML = ep.videoId
         ? `<iframe src="${sibnetSrc(ep.videoId)}"></iframe>`
         : 'Vidéo à venir';
+    setTimeout(wrapDynamicIframes, 0);
 }
 
 function navigateEp(delta) {
