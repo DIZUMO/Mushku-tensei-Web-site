@@ -59,8 +59,68 @@ const EPISODES = {
         ]
     },
 
-    s2p1: { vo: [], vf: [] },
-    s2p2: { vo: [], vf: [] }
+    s2p1: {
+    vo: [
+        { num:'01', title:'Épisode 1', date:'—', videoId:'5186353' },
+        { num:'02', title:'Épisode 2', date:'—', videoId:'5193243' },
+        { num:'03', title:'Épisode 3', date:'—', videoId:'5199557' },
+        { num:'04', title:'Épisode 4', date:'—', videoId:'5205966' },
+        { num:'05', title:'Épisode 5', date:'—', videoId:'5212670' },
+        { num:'06', title:'Épisode 6', date:'—', videoId:'5220585' },
+        { num:'07', title:'Épisode 7', date:'—', videoId:'5226751' },
+        { num:'08', title:'Épisode 8', date:'—', videoId:'5231211' },
+        { num:'09', title:'Épisode 9', date:'—', videoId:'5235472' },
+        { num:'10', title:'Épisode 10', date:'—', videoId:'5242251' },
+        { num:'11', title:'Épisode 11', date:'—', videoId:'5249351' },
+        { num:'12', title:'Épisode 12', date:'—', videoId:'5255407' },
+        { num:'13', title:'Épisode 13', date:'—', videoId:'5260491' }
+    ],
+    vf: [
+        { num:'01', title:'Épisode 1', date:'—', videoId:'5243279' },
+        { num:'02', title:'Épisode 2', date:'—', videoId:'5243289' },
+        { num:'03', title:'Épisode 3', date:'—', videoId:'5249507' },
+        { num:'04', title:'Épisode 4', date:'—', videoId:'5249510' },
+        { num:'05', title:'Épisode 5', date:'—', videoId:'5255614' },
+        { num:'06', title:'Épisode 6', date:'—', videoId:'5255616' },
+        { num:'07', title:'Épisode 7', date:'—', videoId:'5277735' },
+        { num:'08', title:'Épisode 8', date:'—', videoId:'5260626' },
+        { num:'09', title:'Épisode 9', date:'—', videoId:'5277737' },
+        { num:'10', title:'Épisode 10', date:'—', videoId:'5277740' },
+        { num:'11', title:'Épisode 11', date:'—', videoId:'5277751' },
+        { num:'12', title:'Épisode 12', date:'—', videoId:'5277762' },
+        { num:'13', title:'Épisode 13', date:'—', videoId:'5282423' }
+    ]
+},
+s2p2: {
+    vo: [
+        { num:'01', title:'Épisode 1', date:'—', videoId:'5496999' },
+        { num:'02', title:'Épisode 2', date:'—', videoId:'5504610' },
+        { num:'03', title:'Épisode 3', date:'—', videoId:'5512013' },
+        { num:'04', title:'Épisode 4', date:'—', videoId:'5518678' },
+        { num:'05', title:'Épisode 5', date:'—', videoId:'5526402' },
+        { num:'06', title:'Épisode 6', date:'—', videoId:'5533510' },
+        { num:'07', title:'Épisode 7', date:'—', videoId:'5546187' },
+        { num:'08', title:'Épisode 8', date:'—', videoId:'5552364' },
+        { num:'09', title:'Épisode 9', date:'—', videoId:'5558087' },
+        { num:'10', title:'Épisode 10', date:'—', videoId:'5565055' },
+        { num:'11', title:'Épisode 11', date:'—', videoId:'5573405' },
+        { num:'12', title:'Épisode 12', date:'—', videoId:'5581041' }
+    ],
+    vf: [
+        { num:'01', title:'Épisode 1', date:'—', videoId:'5519873' },
+        { num:'02', title:'Épisode 2', date:'—', videoId:'5527541' },
+        { num:'03', title:'Épisode 3', date:'—', videoId:'5534589' },
+        { num:'04', title:'Épisode 4', date:'—', videoId:'5540510' },
+        { num:'05', title:'Épisode 5', date:'—', videoId:'5547436' },
+        { num:'06', title:'Épisode 6', date:'—', videoId:'5552697' },
+        { num:'07', title:'Épisode 7', date:'—', videoId:'5565322' },
+        { num:'08', title:'Épisode 8', date:'—', videoId:'5574499' },
+        { num:'09', title:'Épisode 9', date:'—', videoId:'5582205' },
+        { num:'10', title:'Épisode 10', date:'—', videoId:'5589753' },
+        { num:'11', title:'Épisode 11', date:'—', videoId:'5597254' },
+        { num:'12', title:'Épisode 12', date:'—', videoId:'5605561' }
+    ]
+}
 };
 
 const SEASON_LABELS = {
